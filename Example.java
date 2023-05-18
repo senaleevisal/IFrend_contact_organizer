@@ -5,7 +5,7 @@ class Example{
         public static String[] Contact_Id = new String[1];
         public static String[] contacts_Number =new String[0];
 
-
+//<-----mn aye nagitta maye mthrayaaa!
         public static void ADD_contacts(){
             Scanner input= new Scanner(System.in);
 
