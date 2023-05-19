@@ -7,6 +7,18 @@ class Example{
         public static String[] contact_Company =new String[0];
         public static int[] contact_Salary =new int[0];
 
+        public static boolean sub_num_check(String tp){
+            boolean x =true;
+            for(int i=0;i<10;i++){
+                if( Character.isDigit(tp.charAt(i))){
+                    
+                }else{
+                    x=false;
+                }
+            }
+            return x;
+        }
+
         public static void ADD_contacts(){
             Scanner input= new Scanner(System.in);
             clearConsole();
@@ -46,8 +58,8 @@ class Example{
                 
                 
                 
-                //---------this will get your name-----------------------
-                name:do{
+            //---------this will get your name-----------------------
+            name:do{
                 System.out.print("Name           : ");
                 String[] temp=new String[contacts_Name.length+1];
                 for (int i = 0; i < contacts_Name.length; i++){
@@ -69,7 +81,7 @@ class Example{
                 ll3:do {
                     System.out.print("Number         : ");
                     String input_temp = input.next();
-                    if((input_temp.charAt(0)!=0)&&(input_temp.length()!=10)){
+                    if((input_temp.charAt(0)!=0)&&(input_temp.length()!=10)&& sub_num_check(input_temp)){
                         System.out.println("\nInvalid phone number...");
                         System.out.print("\nDo you want to add phone number again(y/n) ->");
                         String repeat_option = input.next();
